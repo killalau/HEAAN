@@ -18,9 +18,10 @@ using namespace NTL;
 class SecretKey {
 public:
 
-	ZZ* sx = new ZZ[N];
+	ZZ *sx = new ZZ[N];
 
-	SecretKey(Ring& ring);
+	SecretKey();
+	SecretKey(Ring &ring);
 
 };
 

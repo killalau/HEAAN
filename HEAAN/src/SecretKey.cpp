@@ -7,6 +7,9 @@
 */
 #include "SecretKey.h"
 
-SecretKey::SecretKey(Ring& ring) {
+SecretKey::SecretKey() {}
+
+SecretKey::SecretKey(Ring &ring)
+{
 	ring.sampleHWT(sx);
 }

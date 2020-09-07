@@ -19,13 +19,15 @@ Ciphertext::Ciphertext(const Ciphertext& o) : logp(o.logp), logq(o.logq), n(o.n)
 	}
 }
 
-void Ciphertext::copyParams(Ciphertext& o) {
+void Ciphertext::copyParams(const Ciphertext &o)
+{
 	logp = o.logp;
 	logq = o.logq;
 	n = o.n;
 }
 
-void Ciphertext::copy(Ciphertext& o) {
+void Ciphertext::copy(const Ciphertext &o)
+{
 	copyParams(o);
 	for (long i = 0; i < N; ++i) {
 		ax[i] = o.ax[i];

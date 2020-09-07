@@ -40,6 +40,7 @@ public:
 	map<long, string> serKeyMap; ///< contain Encryption, Multiplication and Conjugation keys, if generated
 	map<long, string> serLeftRotKeyMap; ///< contain left rotation keys, if generated
 
+	Scheme(Ring& ring);
 	Scheme(SecretKey& secretKey, Ring& ring, bool isSerialized = false);
 
 	virtual ~Scheme();
